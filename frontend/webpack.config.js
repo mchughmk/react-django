@@ -2,11 +2,12 @@ var path = require("path")
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 module.exports = {
   context: __dirname,
 
-  entry: './src/index.js', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
+  entry: './src/index.js',
 
   output: {
       path: path.resolve('./public/'),
@@ -25,7 +26,10 @@ module.exports = {
   plugins: [
       new ExtractTextPlugin('assets/css/styles-[hash].css'),
       new HtmlWebpackPlugin({
-        template: 'index.html'
+        template: 'index.ejs'
+      }),
+      new WebpackCleanupPlugin({
+        exclude: ['favicon.ico'],
       })
   ],
 
