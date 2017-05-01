@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.js', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
 
   output: {
-      path: path.resolve('./assets/bundles/'),
+      path: path.resolve('./public/assets/bundles/'),
       filename: "bundle.js",
   },
 

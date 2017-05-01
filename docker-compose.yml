@@ -29,7 +29,7 @@ services:
     build: nginx
     image: react-django-nginx
     volumes:
-      - ./frontend:/wwwroot
+      - ./frontend/public:/wwwroot
     ports:
       - "8000:80"
     links:
