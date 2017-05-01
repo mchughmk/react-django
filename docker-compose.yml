@@ -29,7 +29,7 @@ services:
     build: nginx
     image: react-django-nginx
     volumes:
-      - ./frontend/public:/wwwroot
+      - ./frontend:/wwwroot
     ports:
       - "8000:80"
     links:
@@ -37,3 +37,14 @@ services:
     depends_on:
       - api
       - webpack
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: react-django-prod
+    ports:
+      - "8000:80"
+    links:
+      - api
+    depends_on:
+      - api

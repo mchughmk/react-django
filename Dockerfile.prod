@@ -1,0 +1,15 @@
+FROM nginx
+
+RUN apt-get update && apt-get install -y curl build-essential
+
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+RUN apt-get install -y nodejs
+
+WORKDIR /wwwroot
+COPY ./frontend /wwwroot
+
+RUN npm install webpack -g
+RUN npm install
+RUN NODE_ENV=production webpack -p
+
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf

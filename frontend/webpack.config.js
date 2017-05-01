@@ -24,24 +24,25 @@ module.exports = {
   },
 
   plugins: [
-      new ExtractTextPlugin('assets/css/styles-[hash].css'),
-      new HtmlWebpackPlugin({
-        template: 'index.ejs'
-      }),
-      new WebpackCleanupPlugin({
-        exclude: ['favicon.ico'],
-      })
+    new ExtractTextPlugin('assets/css/styles-[hash].css'),
+    new HtmlWebpackPlugin({
+      template: 'index.ejs'
+    }),
+    new WebpackCleanupPlugin({
+      exclude: ['favicon.ico'],
+    })
   ],
 
   resolve: {
     modules: ['node_modules'],
     extensions: ['.css', '.js', '.jsx']
-  },
-
-  watch: true,
-
-  watchOptions: {
-      ignored: /node_modules/,
-      poll: 500
   }
+};
+
+if (process.env.NODE_ENV !== 'production') {
+  module.exports['watch'] = true;
+  module.exports['watchOptions'] = {
+    ignored: /node_modules/,
+    poll: 500
+  };
 }
