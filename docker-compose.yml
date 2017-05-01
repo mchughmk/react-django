@@ -1,0 +1,39 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    ports:
+      - "15432:5432"
+    environment:
+      - POSTGRES_DB=react_django
+  api:
+    build: backend
+    image: react-django-api
+    volumes:
+      - ./backend:/code
+      - ./logs:/logs
+    environment:
+      - DATABASE_URL=postgres://postgres@db/react_django
+    links:
+      - db
+    depends_on:
+      - db
+  webpack:
+    build: frontend
+    image: react-django-webpack
+    volumes:
+      - ./frontend:/code
+    ports:
+      - "35729:35729"
+  nginx:
+    build: nginx
+    image: react-django-nginx
+    volumes:
+      - ./frontend:/wwwroot
+    ports:
+      - "8000:80"
+    links:
+      - api
+    depends_on:
+      - api
+      - webpack

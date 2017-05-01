@@ -1,0 +1,646 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$30000$RYYhLjVPnDuW$aaFVaFEEMkrUhO0myUeCwsLbDRsKP01ac64xxGcA92E=",
+            "last_login": "2017-01-05T15:58:47.211Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@reactdjango.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2017-01-05T15:58:41.737Z",
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.country",
+        "pk": 1,
+        "fields": {
+            "code": "US",
+            "name": "United States"
+        }
+    },
+    {
+        "model": "api.country",
+        "pk": 2,
+        "fields": {
+            "code": "CA",
+            "name": "Canada"
+        }
+    },
+    {
+        "model": "api.country",
+        "pk": 3,
+        "fields": {
+            "code": "AU",
+            "name": "Australia"
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 1,
+        "fields": {
+            "code": "AL",
+            "name": "Alabama",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 2,
+        "fields": {
+            "code": "AK",
+            "name": "Alaska",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 3,
+        "fields": {
+            "code": "AZ",
+            "name": "Arizona", 
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 4,
+        "fields": {
+            "code": "AR",
+            "name": "Arkansas",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 5,
+        "fields": {
+            "code": "CA",
+            "name": "California",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 6,
+        "fields": {
+            "code": "CO",
+            "name": "Colorado",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 7,
+        "fields": {
+            "code": "CT",
+            "name": "Connecticut",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 8,
+        "fields": {
+            "code": "DE",
+            "name": "Deleware",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 9,
+        "fields": {
+            "code": "FL",
+            "name": "Florida",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 10,
+        "fields": {
+            "code": "GA",
+            "name": "Georgia",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 11,
+        "fields": {
+            "code": "HI",
+            "name": "Hawaii",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 12,
+        "fields": {
+            "code": "ID",
+            "name": "Idaho",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 13,
+        "fields": {
+            "code": "IL",
+            "name": "Illinois",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 14,
+        "fields": {
+            "code": "IN",
+            "name": "Indiana",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 15,
+        "fields": {
+            "code": "IA",
+            "name": "Iowa",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 16,
+        "fields": {
+            "code": "KS",
+            "name": "Kansas",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 17,
+        "fields": {
+            "code": "KY",
+            "name": "Kentucky",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 18,
+        "fields": {
+            "code": "LA",
+            "name": "Louisiana",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 19,
+        "fields": {
+            "code": "ME",
+            "name": "Maine",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 20,
+        "fields": {
+            "code": "MD",
+            "name": "Maryland",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 21,
+        "fields": {
+            "code": "MA",
+            "name": "Massachusetts",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 22,
+        "fields": {
+            "code": "MI",
+            "name": "Michigan",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 23,
+        "fields": {
+            "code": "MN",
+            "name": "Minnesota",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 24,
+        "fields": {
+            "code": "MS",
+            "name": "Mississippi",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 25,
+        "fields": {
+            "code": "MO",
+            "name": "Missouri",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 26,
+        "fields": {
+            "code": "MT",
+            "name": "Montana",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 27,
+        "fields": {
+            "code": "NE",
+            "name": "Nebraska",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 28,
+        "fields": {
+            "code": "NV",
+            "name": "Nevada",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 29,
+        "fields": {
+            "code": "NH",
+            "name": "New Hampshire",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 30,
+        "fields": {
+            "code": "NJ",
+            "name": "New Jersey",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 31,
+        "fields": {
+            "code": "NM",
+            "name": "New Mexico",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 32,
+        "fields": {
+            "code": "NY",
+            "name": "New York",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 33,
+        "fields": {
+            "code": "NC",
+            "name": "North Carolina",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 34,
+        "fields": {
+            "code": "ND",
+            "name": "North Dakota",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 35,
+        "fields": {
+            "code": "OH",
+            "name": "Ohio",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 36,
+        "fields": {
+            "code": "OK",
+            "name": "Oklahoma",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 37,
+        "fields": {
+            "code": "OR",
+            "name": "Oregon",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 38,
+        "fields": {
+            "code": "PA",
+            "name": "Pennsylvania",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 39,
+        "fields": {
+            "code": "RI",
+            "name": "Rhode Island",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 40,
+        "fields": {
+            "code": "SC",
+            "name": "South Carolina",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 41,
+        "fields": {
+            "code": "SD",
+            "name": "South Dakota",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 42,
+        "fields": {
+            "code": "TN",
+            "name": "Tennessee",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 43,
+        "fields": {
+            "code": "TX",
+            "name": "Texas",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 44,
+        "fields": {
+            "code": "UT",
+            "name": "Utah",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 45,
+        "fields": {
+            "code": "VT",
+            "name": "Vermont",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 46,
+        "fields": {
+            "code": "VA",
+            "name": "Virginia",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 47,
+        "fields": {
+            "code": "WV",
+            "name": "West Virginia",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 48,
+        "fields": {
+            "code": "WI",
+            "name": "Wisconsin",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 49,
+        "fields": {
+            "code": "WY",
+            "name": "Wyoming",
+            "country": 1
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 50,
+        "fields": {
+            "code": "NSW",
+            "name": "New South Wales",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 51,
+        "fields": {
+            "code": "QLD",
+            "name": "Queensland",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 52,
+        "fields": {
+            "code": "SA",
+            "name": "South Australia",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 53,
+        "fields": {
+            "code": "TAS",
+            "name": "Tasmania",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 54,
+        "fields": {
+            "code": "VIC",
+            "name": "Victoria",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 55,
+        "fields": {
+            "code": "WA",
+            "name": "Western Australia",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 56,
+        "fields": {
+            "code": "ACT",
+            "name": "Australian Capital Territory",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 57,
+        "fields": {
+            "code": "NT",
+            "name": "Northern Territory",
+            "country": 3
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 58,
+        "fields": {
+            "code": "ON",
+            "name": "Ontario",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 59,
+        "fields": {
+            "code": "QC",
+            "name": "Quebec",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 60,
+        "fields": {
+            "code": "BC",
+            "name": "British Columbia",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 61,
+        "fields": {
+            "code": "AB",
+            "name": "Alberta",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 62,
+        "fields": {
+            "code": "NS",
+            "name": "Nova Scotia",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 63,
+        "fields": {
+            "code": "MB",
+            "name": "Manitoba",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 64,
+        "fields": {
+            "code": "SK",
+            "name": "Saskatchewan",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 65,
+        "fields": {
+            "code": "NB",
+            "name": "New Brunswick",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 66,
+        "fields": {
+            "code": "PE",
+            "name": "Prince Edward Island",
+            "country": 2
+        }
+    },
+    {
+        "model": "api.state",
+        "pk": 67,
+        "fields": {
+            "code": "NL",
+            "name": "Newfoundland and Labrador",
+            "country": 2
+        }
+    }
+]
