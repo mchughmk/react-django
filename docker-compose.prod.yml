@@ -18,22 +18,14 @@ services:
       - db
     depends_on:
       - db
-  webpack:
-    build: frontend
-    image: react-django-webpack
-    volumes:
-      - ./frontend:/code
-    ports:
-      - "35729:35729"
   nginx:
-    build: nginx
-    image: react-django-nginx
-    volumes:
-      - ./frontend:/wwwroot
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: react-django-prod
     ports:
       - "8000:80"
     links:
       - api
     depends_on:
       - api
-      - webpack
