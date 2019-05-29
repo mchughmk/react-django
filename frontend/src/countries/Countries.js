@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 
 export default class Countries extends Component {
     render() {
@@ -7,15 +9,19 @@ export default class Countries extends Component {
             return a.name < b.name ? -1 : 1;
         });
         var countryOptions = this.props.countries.map(function(country) {
-            var key = "country_option_" + country.code
-            return <option key={key} value={country.code}>{country.name}</option>;
+            var key = "country_option_" + country.code;
+            // return <option key={key} value={country.code}>{country.name}</option>;
+            return <MenuItem key={key} value={country.code} primaryText={country.name} />;
         });
 
         return (
-            <select onChange={this.props.onChange}>
-                <option value=""></option>
+            <SelectField
+                floatingLabelText="Country"
+                value={this.props.value}
+                onChange={this.props.onChange}>
+                <MenuItem value={null} primaryText="" />
                 {countryOptions}
-            </select>
+            </SelectField>
         );
     }
 }

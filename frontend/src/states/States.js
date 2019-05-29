@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 
 export default class States extends Component {
     render() {
@@ -7,12 +9,18 @@ export default class States extends Component {
             return a.name < b.name ? -1 : 1;
         });
         var stateOptions = this.props.states.map(function(state) {
-            var key = "state_option_" + state.code
-            return <option key={key} value={state.code}>{state.name}</option>;
+            var key = "state_option_" + state.code;
+            return <MenuItem key={key} value={state.code} primaryText={state.name} />;
         });
 
         return (
-            <select>{stateOptions}</select>
+            <SelectField
+                floatingLabelText="State"
+                value={this.props.value}
+                onChange={this.props.onChange}>
+                <MenuItem value={null} primaryText="" />
+                {stateOptions}
+            </SelectField>
         );
     }
 }

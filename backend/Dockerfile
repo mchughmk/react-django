@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 
-RUN apk add --no-cache bash postgresql postgresql-client postgresql-dev gcc python3-dev musl-dev
+RUN apk add --no-cache bash postgresql postgresql-client postgresql-dev gcc python3-dev musl-dev openssl-dev libffi-dev
 
 ENV PYTHONUNBUFFERED 1
 ENV PROJECT_HOME=/code

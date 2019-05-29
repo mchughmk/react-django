@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Countries from './Countries.js';
+import * as auth from '../auth.js';
 
 export default class CountriesContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            value: null,
             countries: []
         };
         this.handleChange = this.handleChange.bind(this);
@@ -12,7 +14,11 @@ export default class CountriesContainer extends Component {
     }
 
     getCountriesFromApiAsync() {
-        return fetch('http://localhost:8000/api/countries/')
+        return fetch('http://localhost:8000/api/countries/', {
+                headers: {
+                    'Authorization': 'Token ' + auth.retrieveToken()
+                }
+            })
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({countries: responseJson});
@@ -22,9 +28,9 @@ export default class CountriesContainer extends Component {
             });
     }
 
-    handleChange(e) {
-        var newCountry = e.target.value;
-        this.props.onChange(newCountry);
+    handleChange(event, index, value) {
+        this.setState({value: value});
+        this.props.onChange(value);
     }
 
     componentDidMount(nextProps, nextState) {
@@ -32,6 +38,6 @@ export default class CountriesContainer extends Component {
     }
 
     render() {
-        return <Countries onChange={this.handleChange} countries={this.state.countries} />;
+        return <Countries onChange={this.handleChange} value={this.state.value} countries={this.state.countries} />;
     }
 }

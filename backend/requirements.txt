@@ -4,3 +4,4 @@ djangorestframework==3.6.2
 whitenoise==3.3.0
 gunicorn==19.7.1
 psycopg2==2.6.1
+django-rest-knox==3.0.0
