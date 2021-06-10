@@ -1,4 +1,4 @@
-Django==1.11
+Django==2.2.24
 dj-database-url==0.4.2
 djangorestframework==3.6.2
 whitenoise==3.3.0
